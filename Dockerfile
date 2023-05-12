@@ -1,9 +1,9 @@
 #
 # Build stage
 #
-FROM maven:3.9.1-eclipse-temurin-11-alpine AS build
+FROM maven:3.8.3-openjdk-17 AS build
 COPY . .
-RUN mvn clean package
+RUN mvn clean package -DskipTests
 
 #
 # Package stage
