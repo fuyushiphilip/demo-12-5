@@ -3,8 +3,8 @@
 #
 FROM maven:3.9.1-eclipse-temurin-11-alpine AS build
 COPY . .
-RUN mvn clean package -DskipTests
-RUN #mvn clean package -Dmaven.test.skip=true
+RUN mvn clean package
+
 #
 # Package stage
 #
